@@ -155,8 +155,8 @@ function! PareditInitBuffer()
         nnoremap <buffer> <silent> caw          :<C-U>call PareditChangeSpec('caw',1)<CR>
         nnoremap <buffer> <silent> do           do
         nnoremap <buffer> <silent> dp           dp
-        call RepeatableNNoRemap('p', ':<C-U>call PareditPut("p")')
-        call RepeatableNNoRemap('P', ':<C-U>call PareditPut("P")')
+        " call RepeatableNNoRemap('p', ':<C-U>call PareditPut("p")')
+        " call RepeatableNNoRemap('P', ':<C-U>call PareditPut("P")')
         call RepeatableNNoRemap(g:paredit_leader . 'w(', ':<C-U>call PareditWrap("(",")")')
         execute 'vnoremap <buffer> <silent> ' . g:paredit_leader.'w(  :<C-U>call PareditWrapSelection("(",")")<CR>'
         call RepeatableNNoRemap(g:paredit_leader . 'w"', ':<C-U>call PareditWrap('."'".'"'."','".'"'."')")
