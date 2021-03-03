@@ -340,12 +340,12 @@ function! PareditOpfunc( func, type, visualmode )
 
         if matched == ''
             if a:func == 'c' && (a:type == 'v' || a:type == 'V' || a:type == 'char')
-                silent exe "normal! gvc"
+                silent exe 'normal! gv"' . regname . 'c'
             else
-                silent exe "normal! gvd"
+                silent exe 'normal! gv"' . regname . 'd'
             endif
         else
-            silent exe "normal! gvc" . matched
+            silent exe 'normal! gv"' . regname . 'c' . matched
             silent exe "normal! l"
             let offs = len(matched)
             if matched[0] =~ b:any_closing_char
